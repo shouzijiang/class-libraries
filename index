@@ -36,6 +36,7 @@ socket.on('connection',function(sock){
 		}
 		sock.emit('line',num.length);
 	});
+	//connection貌似无法实时监测在线人数  用定时器肯定是错的 （测试）
 	setInterval(function(){
 		sock.emit('line',num.length);
 	},1000)
